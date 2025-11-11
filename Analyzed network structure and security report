@@ -1,0 +1,45 @@
+Security Risk Assessment Report
+
+
+Part 1: Hardening Tools and Methods
+To strengthen the organization’s security and reduce system vulnerabilities, three recommended hardening methods are:
+Enable Multi-Factor Authentication (MFA)
+Create and Enforce Strong Password Policies
+Perform Regular Firewall Reviews and Maintenance
+
+Multi-Factor Authentication (MFA)
+MFA adds an extra step to the login process by requiring users to confirm their identity in more than one way. 
+For example, a user might enter a password and then verify with a fingerprint scan, a one-time code sent to their phone, or an access card. 
+This makes it much harder for attackers to break in using stolen credentials alone.
+
+Password Policies
+Password policies help ensure that all employees use secure and unique passwords. The policy can define password length, allowed characters, and rules about reusing old passwords. 
+It can also set limits on failed login attempts—such as locking an account after five unsuccessful tries—to prevent brute-force attacks.
+Employees should also be reminded not to share passwords under any circumstances.
+
+Firewall Maintenance
+Keeping the firewall up to date is essential for protecting the company’s internal network. Regular maintenance should include reviewing firewall rules, checking for outdated configurations, 
+and updating settings to block suspicious traffic. This ongoing process helps detect and stop threats before they cause harm.
+
+
+Part 2: Recommendations and Justifications
+
+1. Multi-Factor Authentication (MFA)
+MFA provides a strong defense against unauthorized access by requiring multiple forms of verification. Even if a hacker manages to steal a password, they still won’t be able to log in
+without the second verification step. This significantly reduces the success rate of phishing and brute-force attacks. MFA also discourages employees from sharing passwords, since a
+password alone wouldn’t grant someone full access.
+
+2. Strong Password Policy
+Implementing and enforcing a clear password policy increases overall network security. Complex passwords that include a mix of letters, numbers, and symbols make it more difficult for 
+attackers to guess or crack them. Requiring regular password changes and preventing password reuse further reduces the risk of compromise. Additionally, automatic account lockouts after
+repeated failed login attempts can stop brute-force attempts early.
+
+3. Regular Firewall Maintenance
+A properly maintained firewall acts as the first line of defense against external threats. Administrators should routinely review and update firewall rules to match the latest security 
+standards and organizational needs. Any suspicious IP addresses or unusual traffic patterns should be blocked immediately. After any security event or attempted intrusion, firewall 
+configurations should be reassessed to close any new vulnerabilities. These updates help the company defend against threats like denial-of-service (DoS) and 
+distributed denial-of-service (DDoS) attacks.
+
+Summary:
+By combining MFA, strong password enforcement, and consistent firewall maintenance, the organization can significantly improve its security posture. 
+These controls work together to protect sensitive data, reduce unauthorized access, and help the company stay ahead of evolving cyber threats.
