@@ -1,0 +1,130 @@
+Part 1: Security Controls I Worked On
+
+1. Setting User Permissions (Least Privilege)
+I found that everyone in the company could view customer files, which isn’t safe. I used Linux commands to make sure only specific users could access sensitive folders.
+# Create a new group for IT admins
+sudo groupadd it_admin
+
+# Add the admin user to that group
+sudo usermod -aG it_admin admin1
+
+# Change file ownership so only IT admins can access it
+sudo chown root:it_admin /etc/customer_data
+
+# Set permissions so only the owner and IT group can read/write
+sudo chmod 770 /etc/customer_data
+
+Result:
+Now only the admin and IT team can open customer data folders. Regular employees are blocked automatically.
+
+2. Creating Strong Password Rules
+
+User passwords were too short and easy to guess. I updated the password policy and added a rule that locks the account after too many failed login attempts.
+# Open password settings file
+sudo nano /etc/login.defs
+
+# Example settings I added or edited
+PASS_MIN_LEN 10
+PASS_MAX_DAYS 90
+
+To stop brute-force logins:
+# Edit PAM authentication rules
+sudo nano /etc/pam.d/common-auth
+# Add this line:
+auth required pam_tally2.so deny=5 unlock_time=600
+
+Result:
+Passwords must now be at least 10 characters long and accounts lock for 10 minutes after 5 failed login tries.
+
+3. Adding Multi-Factor Authentication (MFA)
+To make logins safer, I set up MFA so users need both a password and a code from their phone to log in.
+
+# Install Google Authenticator tool
+sudo apt install libpam-google-authenticator
+
+# Enable MFA in SSH settings
+sudo nano /etc/pam.d/sshd
+# Add this line:
+auth required pam_google_authenticator.so
+
+
+Then I edited the SSH configuration:
+sudo nano /etc/ssh/sshd_config
+# Make sure this line is set to "yes"
+ChallengeResponseAuthentication yes
+
+# Restart SSH to apply changes
+sudo systemctl restart ssh
+
+Result:
+Now every remote login requires both a password and a verification code, which helps stop stolen password attacks.
+
+4. Checking and Updating Firewall Rules
+The system firewall was on, but some rules were missing or outdated. I cleaned it up and made sure only important traffic was allowed.
+
+# Turn on the firewall and check its status
+sudo ufw enable
+sudo ufw status
+
+# Block all incoming traffic by default
+sudo ufw default deny incoming
+
+# Allow only necessary connections
+sudo ufw allow 22/tcp   # SSH
+sudo ufw allow 443/tcp  # HTTPS
+
+# Deny anything suspicious
+sudo ufw deny from 203.0.113.0/24
+
+Result:
+The firewall now only allows trusted traffic, blocking unknown IPs and unused ports.
+5. Managing File Permissions and Ownership
+
+I checked who could access sensitive folders and changed permissions to protect them.
+
+# See current permissions
+ls -l /home/shared/
+
+# Change folder ownership
+sudo chown admin1:it_admin /home/shared/
+
+# Update permissions so only admins can access
+sudo chmod 750 /home/shared/
+
+Result:
+Now only admin users can open or edit files in that directory. Others get a “Permission denied” message.
+
+6. Backups and Recovery
+To make sure files aren’t lost, I created a simple backup script that copies important folders once a day.
+# Create a backup folder
+sudo mkdir /backups
+
+# Copy important files
+sudo cp -r /etc/customer_data /backups/
+
+# Schedule daily backup using cron
+crontab -e
+# Example cron line:
+0 2 * * * cp -r /etc/customer_data /backups/
+
+Result:
+Backups run automatically every night at 2 AM, helping protect data in case of an incident.
+
+Part 2: Why These Steps Matter
+Security Control-	Purpose	How It Helps
+
+Least Privilege-	Limits access to sensitive files	Reduces risk of insider threats or data leaks
+
+Strong Passwords-	Enforces good password habits	Prevents brute-force and weak password attacks
+
+MFA	Adds a second- login step	Protects against stolen passwords
+
+Firewall Rules-	Blocks bad network traffic	Stops intrusions and DDoS attempts
+
+File Permissions-	Controls who can read/write files	Keeps important data private
+
+Backups	Keeps- copies of important files	Helps recovery after a cyberattack or hardware failure
+
+Conclusion
+By using simple Linux commands, I was able to improve security on the system and reduce risks.
+These changes help protect company data, limit user access, and create a more secure and stable environment.
