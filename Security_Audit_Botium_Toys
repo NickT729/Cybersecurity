@@ -1,0 +1,87 @@
+Security Audit – Botium Toys
+Controls Assessment Checklist
+
+Control	In Place (Yes/No)	Explanation
+
+Least Privilege	❌	Right now, everyone in the company can access customer data. We should limit access so only employees who need this information can see it. 
+This will reduce the chance of a data leak or misuse.
+
+Disaster Recovery Plan	❌	There’s no backup plan if a major system failure or cyberattack happens. We need a recovery plan so the business can keep running if something goes wrong.
+
+Password Policies	❌	Employee passwords are too simple. Stronger password rules (longer passwords, special characters, regular updates) are needed to help protect company systems.
+
+Separation of Duties	❌	One person (the CEO) handles too many critical tasks, like running daily operations and managing payroll. Dividing these roles would lower the risk of 
+mistakes or fraud.
+
+Firewall	✅	The company has a working firewall that filters network traffic based on security rules. This helps block unwanted or suspicious activity.
+
+Intrusion Detection System (IDS)	❌	There’s no system that monitors for possible hacking attempts. Installing an IDS would alert IT staff if someone tries to break in.
+
+Backups	❌	Important data isn’t being backed up. Setting up regular backups would help the company recover faster after a breach or system failure.
+
+Antivirus Software	✅	Antivirus software is installed and regularly updated by IT staff to keep systems protected from malware.
+
+Legacy System Maintenance	❌	The company still uses older systems, but they aren’t checked or maintained on a regular schedule. Regular updates and a clear maintenance
+plan would help reduce risks.
+
+Encryption	❌	Data isn’t currently encrypted. Using encryption would help protect sensitive information like customer and payment data.
+
+Password Management System	❌	There’s no password manager in use. Implementing one would make it easier for employees to use strong, unique passwords safely.
+
+Locks (Physical Security)	✅	Offices, the storefront, and the warehouse have secure locks in place.
+
+CCTV Surveillance	✅	Cameras are installed and working to monitor physical spaces.
+
+Fire Detection/Prevention Systems	✅	Fire alarms and sprinklers are working properly to protect people and property.
+
+Compliance Checklist
+Payment Card Industry Data Security Standard (PCI DSS)
+Best Practice	In Place (Yes/No)	Explanation
+Only authorized users have access to customers’ credit card data.	❌	Everyone in the company can see customer payment info. Access should be limited to specific, authorized employees.
+
+Credit card data is stored securely.	❌	Payment info isn’t encrypted, and too many people can access it. This makes it vulnerable.
+
+Use encryption for payment data.	❌	Encryption should be added to protect credit card transactions.
+
+Use strong password management policies.	❌	Passwords aren’t strong or well-managed. A password manager would help enforce better security.
+
+General Data Protection Regulation (GDPR)
+Best Practice	In Place (Yes/No)	Explanation
+Protect EU customers’ personal data.	❌	Customer data isn’t encrypted, so it’s not fully secure.
+
+Notify EU customers of breaches within 72 hours.	✅	There is a plan in place to alert customers within 72 hours if their data is compromised.
+
+Classify and organize all company data.	❌	Assets are listed but not labeled or categorized properly.
+
+Enforce privacy policies and procedures.	✅	Privacy rules exist and are followed by IT and staff where needed.
+
+System and Organization Controls (SOC 1 / SOC 2)
+Best Practice	In Place (Yes/No)	Explanation
+Set user access policies.	❌	No access controls are in place, so all employees can see sensitive data.
+
+Keep personal/sensitive data private.	❌	Data isn’t encrypted, which puts personal information at risk.
+
+Maintain data integrity.	✅	Data is consistent and accurate.
+
+Limit data access to authorized users only.	❌	All employees currently have access; permissions should be restricted based on job role.
+
+Recommendations
+To improve security, Botium Toys should:
+
+Limit employee access (Least Privilege)
+
+Create a disaster recovery plan
+
+Enforce strong password policies
+
+Set up an IDS system to detect intrusions
+
+Implement regular backups and legacy system maintenance
+
+Use encryption for customer and payment data
+
+Introduce a password manager to simplify secure access
+
+Properly classify and label assets to find security gaps faster
+
+These changes would help protect sensitive data, strengthen compliance, and lower the company’s risk of data breaches or operational downtime.
