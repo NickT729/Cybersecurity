@@ -46,13 +46,6 @@ Welcome! This repository showcases my cybersecurity research and practical work 
 
 ---
 
-## 📁 Repository Structure
-
-- `/research/` — Research notes, papers, and summaries (some content anonymized/redacted)
-- `/poc-scripts/` — Sample PoC scripts and automation tools (Python, Bash)
-- `/tcpdump-analysis/` — TCPDump logs, vulnerability analysis reports, and workflow documentation
-- `/certification-practice/` — Security+ practice labs, guides, and study resources
-
 ---
 
 ## 🚀 Highlights
@@ -71,9 +64,10 @@ To leverage my research, hands-on skills, and Security+ certification in an entr
 
 ## 📫 Contact
 
-- [LinkedIn](#) <!-- Add your LinkedIn profile here -->
-- [Email](mailto:your.email@domain.com) <!-- Replace with your email -->
+- [LinkedIn](https://www.linkedin.com/in/nickt729/) <!-- Add your LinkedIn profile here -->
+- [Email](torresnick729@gmail.com) <!-- Replace with your email -->
 - [GitHub](https://github.com/NickT729)
+- [Youtube Tutorials] (https://youtu.be/LuLRCWqCVkE?si=OjoH3YYlGrUQFegH)
 
 ---
 
