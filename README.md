@@ -1,6 +1,7 @@
 # Cybersecurity Research Portfolio
 
-Welcome! This repository showcases my cybersecurity research and practical work as an Undergraduate Research Assistant at the University of Texas at Arlington, in the College of Engineering and Computer Science. My aim is to bridge academic research and hands-on security skills, preparing for a career in cybersecurity and threat analysis.
+Welcome! This repository showcases my cybersecurity research and practical work as an Undergraduate Research Assistant/ Cybersecurity Student at the University of Texas at Arlington, as I finish my B.S. in Management Information Systems. My aim is to bridge academic research and hands-on security skills, preparing for a career in cybersecurity and threat analysis.
+Enjoy! 
 
 ---
 
