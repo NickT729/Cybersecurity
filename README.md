@@ -7,9 +7,9 @@ Welcome! This repository showcases my cybersecurity research and practical work 
 ## 🧑‍🎓 About Me
 
 - **Name:** Nick T.
-- **Education:** B.S. in Computer Science (In Progress), University of Texas at Arlington
+- **Education:** B.S. in Management Information Systems , University of Texas at Arlington
 - **Certification:** [CompTIA Security+](https://www.comptia.org/certifications/security) (Earned Winter 2024-2025)
-- **Current Role:** Undergraduate Research Assistant – Cybersecurity & AI
+- **Most Recent Role Role:** Undergraduate Research Assistant – Cybersecurity & AI
 - **Interests:** Threat analysis, red teaming, exploit development, AI for security, vulnerability research
 
 ---
@@ -18,7 +18,7 @@ Welcome! This repository showcases my cybersecurity research and practical work 
 
 ### 1. AI-Driven PoC Generation & Exploit Analysis
 **Role:** Undergraduate Research Assistant  
-**Duration:** January 2025–Present  
+**Duration:** January 2025–June 2025  
 **Location:** University of Texas at Arlington, College of Engineering and Computer Science
 
 - Conducting research on the application of Large Language Models (LLMs) in cybersecurity, specifically for automated Proof-of-Concept (PoC) generation and vulnerability analysis.
