@@ -1,0 +1,48 @@
+Incident Handler's Journal
+
+Date: November 13, 2025
+Entry #: 1
+-----------
+Description
+-----------
+Documenting a cybersecurity incident involving unauthorized access and ransomware deployment within a health care organization.
+--------------------------
+The 5 W’s of the Incident
+--------------------------
+Who:
+An organized group of unethical hackers operating as a financially motivated threat actor.
+
+What:
+A ransomware attack that resulted in the encryption of critical systems and sensitive operational data.
+
+Where:
+A health care company with access to protected health information (PHI) and mission-critical medical systems.
+
+When:
+Tuesday at 9:00 a.m., during standard business operations.
+
+Why:
+Attackers gained access through a successful phishing campaign targeting employees.
+After establishing initial access, they executed ransomware payloads across the network to encrypt essential files.
+The ransom note left behind demanded a substantial payment in exchange for the decryption key, indicating financial motivation.
+------------------------------
+Additional Notes / Reflection
+------------------------------
+How could the health care company prevent an incident like this in the future?----
+
+Implement stronger email security controls such as phishing filters, attachment sandboxing, and domain reputation checks.
+Require mandatory employee cybersecurity awareness training, particularly focusing on phishing and social engineering.
+Enforce Multi-Factor Authentication (MFA) to reduce the impact of compromised credentials.
+Maintain regular, encrypted, offline backups to ensure system recovery without needing to negotiate with attackers.
+Invest in endpoint detection and response (EDR) tools capable of detecting lateral movement and ransomware behaviors.
+Apply network segmentation to prevent widespread file encryption if one endpoint is compromised.
+
+Should the company pay the ransom?----
+
+Paying the ransom is strongly discouraged for several reasons: 
+There is no guarantee the attackers will provide a working decryption key.
+Paying incentivizes and funds future criminal activity.
+Payment may violate regulations depending on the attackers’ identities or sanctioned status.
+Well-maintained backups and recovery plans are the safer and more ethical mitigation path.
+
+Most cybersecurity guidelines—including those from CISA, FBI, and NIST—recommend not paying the ransom and instead focusing on incident response, recovery, and long-term hardening.
