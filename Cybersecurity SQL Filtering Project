@@ -1,0 +1,90 @@
+Cybersecurity SQL Filtering Project
+INSY-4325--01 
+
+In this project, I used SQL queries to analyze system logs and employee data to identify potential security threats and support endpoint management tasks. 
+The focus was on applying SQL filters to detect suspicious activity, investigate login anomalies, and target department-specific updates for system hardening.
+
+1. Retrieve After-Hours Failed Login Attempts
+A possible brute-force or unauthorized access attempt occurred outside normal working hours (after 18:00).
+To investigate, I retrieved all failed login attempts that happened after business hours.
+
+SQL Query
+SELECT *
+FROM log_in_attempts
+WHERE login_time > '18:00'
+AND success = FALSE;
+
+Explanation:
+This query selects all data from the log_in_attempts table where the login_time is later than 18:00 and the success value is FALSE.
+It helps detect suspicious failed logins that might indicate attack activity occurring when fewer staff are monitoring the system.
+
+2. Retrieve Login Attempts on Specific Dates
+A suspicious event occurred on 2022-05-09. I expanded the analysis to include logins from the day before to identify related activity.
+
+SQL Query
+SELECT *
+FROM log_in_attempts
+WHERE login_date = '2022-05-09'
+OR login_date = '2022-05-08';
+
+Explanation:
+This query retrieves all login attempts from both dates. Using the OR operator allows for correlation analysis of user activity leading up to the event. It supports incident response and timeline reconstruction during security investigations.
+
+3. Retrieve Login Attempts Outside of Mexico
+During geo-location monitoring, I identified potential unauthorized access attempts from outside the organization’s operating region.
+To investigate further, I filtered login attempts that originated outside of Mexico.
+
+SQL Query
+SELECT *
+FROM log_in_attempts
+WHERE country NOT LIKE 'MEX%';
+
+Explanation:
+This query filters for login attempts from any country not labeled as “MEX” or “MEXICO.”
+It helps identify possible external threats or compromised accounts logging in from foreign IP addresses.
+
+4. Retrieve Employees in the Marketing Department (East Building)
+To deploy a security patch, I needed to locate computers belonging to employees in the Marketing department working in the East building.
+
+SQL Query
+SELECT *
+FROM employees
+WHERE department = 'Marketing'
+AND office LIKE 'East%';
+
+Explanation:
+This query filters the employees table to find Marketing staff whose office location starts with “East.”
+It supports targeted system updates and ensures security configurations are applied only to relevant endpoints.
+
+5. Retrieve Employees in Finance or Sales
+A separate security update was required for employees in the Finance and Sales departments.
+The goal was to extract all relevant employee machine information for these departments.
+
+SQL Query
+SELECT *
+FROM employees
+WHERE department = 'Finance'
+OR department = 'Sales';
+
+Explanation:
+The OR operator ensures both departments are included in the results. This helps the IT team efficiently push department-specific security policies.
+
+6. Retrieve Employees Not in IT
+To apply user-focused endpoint protections, I needed to isolate employees not in the Information Technology department.
+
+SQL Query
+SELECT *
+FROM employees
+WHERE department NOT LIKE 'Information Technology';
+
+Explanation:
+Using the NOT operator filters out IT staff, allowing the cybersecurity team to focus on general users who may need additional endpoint hardening or user-access restrictions.
+
+Summary
+This project demonstrates how SQL filtering can be applied to real-world cybersecurity tasks, including:
+Log Analysis: Detecting failed or suspicious login attempts.
+Incident Response: Investigating access patterns before, during, and after an event.
+Geo-Location Filtering: Identifying logins from unauthorized regions.
+Endpoint Management: Targeting system updates based on department or role.
+SQL operators such as AND, OR, NOT, and LIKE, combined with wildcards (%), were used to refine datasets and isolate meaningful security indicators.
+These techniques are essential for analysts performing threat detection, forensic analysis, and policy enforcement in cybersecurity environments.
