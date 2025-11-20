@@ -1,0 +1,10 @@
+def analyze_log(file_path):
+    print("\n===== FLAGGED LOG ENTRIES (SIEM OUTPUT) =====\n")
+
+    with open(file_path, 'r') as file:
+        for line in file:
+            if "ERROR" in line or "WARNING" in line:
+                print(line.strip())
+
+log_file_path = r"C:\Users\Torre\OneDrive\Desktop\server.log"
+analyze_log(log_file_path)
