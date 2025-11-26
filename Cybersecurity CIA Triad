@@ -1,0 +1,55 @@
+CIA Triad: 
+
+Combination of principles 
+
+ 
+
+Confidentiality: 
+Prevent disclosure of information to unauthorized individuals or systems 
+Certain information should only be known to certain people 
+Prevent Unauthorized  information disclosure 
+
+Encryption: 
+Encode messages so only certain people can read it 
+
+Access Controls: 
+Selectively restrict access to a resource 
+
+Two-Factor Authentication: 
+Additional Confirmation before information is disclosed 
+
+Integrity: 
+Messages can't be modified without detection 
+Data is stored and transferred as intended 
+Any modification to the data would be identified 
+
+Hashing: 
+Map data of an arbitrary length to data of a fixed length  
+Person sending will create a hash of the data, sending both data and hash at once, when receiving, if your hash matches the sender's hash, it's same as sent 
+
+Digital Signature: 
+Mathematical scheme to verify the integrity of data  
+Takes hash and encrypts it with an asymmetric encryption algorithm  
+
+  
+
+Certificates: 
+Combine with a digital signature to verify an individual   
+
+Non-Repudiation: 
+Provides proof of integrity, can be asserted to be genuine 
+
+Availability: 
+Systems and networks must be up and running 
+Information is accessible to authorized users 
+Always at your fingertips 
+
+Redundancy: 
+Build services that will always be available 
+
+Fault tolerance: 
+System will continue to run, even when a failure occurs.   
+
+Patching: 
+Stability 
+Close Security Holes 
